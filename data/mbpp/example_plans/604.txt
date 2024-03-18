@@ -1,0 +1,4 @@
+1. Split the string into a list of words.
+2. Reverse the order of the list.
+3. Join the words back into a string with spaces in between.
+4. Return the reversed string.

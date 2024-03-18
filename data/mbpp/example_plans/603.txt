@@ -1,0 +1,4 @@
+1. Define a function to check if a number is lucid.
+2. Loop through all numbers from n to 1.
+3. Check if each number is lucid.
+4. Return the first lucid number found.

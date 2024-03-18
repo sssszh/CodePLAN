@@ -1,0 +1,7 @@
+code:
+s = input()\n\nl = list(set(s))\n\nn = len(l)\n\nif n % 2 == 0:\n\tprint(\"CHAT WITH HER!\")\nelse:\n\tprint(\"IGNORE HIM!\")
+Write a step-by-step solution plan following the above code:
+1. Read the input string. 
+2. Create a set and iterate through each character in the input string, adding each character to the set if it doesn't already exist in the set.
+3. Get the length of the set and check if it is even or odd.
+4. If the length is even, print "CHAT WITH HER!", otherwise, print "IGNORE HIM!".

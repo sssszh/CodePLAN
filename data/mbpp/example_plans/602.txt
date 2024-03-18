@@ -1,0 +1,5 @@
+1. Create an empty set to keep track of characters seen so far.
+2. Loop through each character in the string.
+3. If the character is already in the set, return it as the first repeated character.
+4. Otherwise, add the character to the set.
+5. If no repeated character is found, return None.

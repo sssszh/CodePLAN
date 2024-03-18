@@ -1,0 +1,5 @@
+evaluate==0.4.0
+openai==0.27.0
+pyext==0.7
+torch==1.13.1
+tqdm==4.64.1

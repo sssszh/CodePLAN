@@ -1,0 +1,4 @@
+1. Check if the input is less than 2, return False.
+2. Loop all numbers less than the square root of the input.
+3. If the input is divisible by any of those numbers, return False.
+4. Otherwise, return True.

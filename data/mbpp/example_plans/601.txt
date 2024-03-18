@@ -1,0 +1,7 @@
+1. Create a dictionary to store the pairs as key-value pairs.
+2. Create a variable to keep track of the longest chain length.
+3. Loop through each pair in the dictionary.
+4. For each pair, check if the value is in the dictionary.
+5. If it is, increment the chain length and set the value as the new key.
+6. If it is not, compare the current chain length to the longest chain length and update if necessary.
+7. Return the longest chain length.
