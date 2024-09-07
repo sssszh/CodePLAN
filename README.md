@@ -50,4 +50,5 @@ python generate_code_with_plan.py --test_path ./data/apps/test --output_path ./o
 You can run `test_one_solution.sh` to evaluate generated codes:
 ```
 bash test_one_solution.sh
+python eval_metric.py
 ```
