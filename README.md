@@ -31,7 +31,7 @@ python train_codet5.py --model codet5-large-ntp-py --save_dir ./models -- train_
 ### Generating codes with finetuned model
 You can run `generate_codet5.py` to generate codes:
 ```
-python generate_codet5.py --test_path data/apps/test -- output_path ./outputs/codes --model_path ./model --plan_head True --is_plan False --temperature
+python generate_codet5.py --test_path ./data/apps/test -- output_path ./outputs/codes --model_path ./model --plan_head True --is_plan False --temperature 0.6
 ```
 
 ### Generating solution plans with finetuned model
