@@ -52,7 +52,13 @@ python generate_codet5.py \
 ### Generating solution plans with finetuned model
 You can run `generate_codet5_plan.py` to generate solution plans:
 ```
-python generate_codet5_plan.py --test_path ./data/apps/test --output_path ./outputs/plans --model_path ./model --plan_head True --is_plan True --temperature 0.6
+python generate_codet5_plan.py \
+    --test_path ./data/apps/test \
+    --output_path ./outputs/plans \
+    --model_path ./model \
+    --plan_head \
+    --is_plan \
+    --temperature 0.6
 ```
  
 ### Generating codes with solution plan
