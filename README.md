@@ -19,19 +19,34 @@ We used two datasets to fine-tune our model:
 ### Generating Plans from LLM
 We use openai's gpt-3.5-turbo to generate the solution plans data for training.You can get it by running `generate_plans_from_LLM\generate_apps_plan.py`:
 ```
-python generate_apps_plan.py --test_path ../data/apps/train --save_path ../data/apps/train --start 0 --end 5000
+python generate_apps_plan.py \
+    --test_path ../data/apps/train \
+    --save_path ../data/apps/train \
+    --start 0 \
+    --end 5000
 ```
 
 ### Finetuning with solution plans
 Using CodeT5 as an example, you can run `train_codet5.py` to finetune the CodeT5 with solution plans:
 ```
-python train_codet5.py --model codet5-large-ntp-py --save_dir ./models -- train_path ./data/appps/train --tuning_mode plan --clone_pl_head --epochs 10
+python train_codet5.py \
+    --model codet5-large-ntp-py \
+    --save_dir ./models/ \
+    -- train_path ./data/appps/train \
+    --tuning_mode plan \
+    --clone_pl_head \
+    --epochs 10
 ```
 
 ### Generating codes with finetuned model
 You can run `generate_codet5.py` to generate codes:
 ```
-python generate_codet5.py --test_path ./data/apps/test -- output_path ./outputs/codes --model_path ./model --plan_head --temperature 0.6
+python generate_codet5.py \
+    --test_path ./data/apps/test \
+    -- output_path ./outputs/codes \
+    --model_path ./model
+    --plan_head
+    --temperature 0.6
 ```
 
 ### Generating solution plans with finetuned model
@@ -43,7 +58,11 @@ python generate_codet5_plan.py --test_path ./data/apps/test --output_path ./outp
 ### Generating codes with solution plan
 You can run 'generate_code_with_plan.py` to generate code with generated solution plan as prompt:
 ```
-python generate_code_with_plan.py --test_path ./data/apps/test --output_path ./outputs/codes --model_path ./model --plan_head True --is_plan False
+python generate_code_with_plan.py \
+    --test_path ./data/apps/test \
+    --output_path ./outputs/codes \
+    --model_path ./model
+    --plan_head
 ```
 
 ### Evaluate generated codes
