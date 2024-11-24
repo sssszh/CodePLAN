@@ -32,7 +32,7 @@ Using CodeT5 as an example, you can run `train_codet5.py` to finetune the CodeT5
 python train_codet5.py \
     --model codet5-large-ntp-py \
     --save_dir ./models/ \
-    -- train_path ./data/appps/train \
+    --train_path ./data/appps/train \
     --tuning_mode plan \
     --clone_pl_head \
     --epochs 10
@@ -43,7 +43,7 @@ You can run `generate_codet5.py` to generate codes:
 ```
 python generate_codet5.py \
     --test_path ./data/apps/test \
-    -- output_path ./outputs/codes \
+    --output_path ./outputs/codes \
     --model_path ./model
     --plan_head
     --temperature 0.6
